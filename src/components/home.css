@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(./Fonts/JosefinSans-VariableFont_wght.ttf);
+  }
+  
+  .home {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    font-family: 'JosefinSans';
+    /* Adding animation for initial load */
+    animation: fadeIn 0.5s e 
+    ase;
+  }
+  
+  .banner-text {
+    text-align: center;
+    margin-bottom: 20px;
+    /* Adding animation for text */
+    animation: slideIn 0.8s ease;
+  }
+  
+  .banner-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-text h1 span {
+    color: #0e653b;
+    /* Adding hover animation for the span */
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .banner-text h1 span:hover {
+    transform: scale(1.05);
+  }
+  
+  .home-p-tag {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .banner-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .banner-buttons a {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    /* Adding smooth transition for hover effects */
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: white;
+    color: #000;
+    border: 2px solid #ea0d8b;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ea0d8b;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(234, 13, 139, 0.2);
+  }
+  
+  .btn-secondary {
+    background-color: #0e653b;
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #f7bb14;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(247, 187, 20, 0.2);
+  }
+  
+  .banner-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #0e653b;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    /* Adding hover animation for the container */
+    transition: transform 0.3s ease;
+  }
+
+  .banner-images:hover {
+    transform: scale(1.02);
+  }
+  
+  .more-home {
+    position: absolute;
+    top: 10px;
+    right: -30;
+  }
+
+  .brands{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .supporting{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .supporting:hover{
+    transition: .5s ease;
+    scale: 1.2;
+  } 
+
+  .homepic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    /* Adding hover animations for the image */
+    transition: all 0.5s ease;
+  }
+
+  .homepic:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner-infor {
+    position: absolute;
+    top: 200px;
+  }
+  
+  .banner-infor h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  .banner-infor p {
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  /* Adding animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Your existing Media Queries - now enhanced for better responsiveness */
+  @media (min-width: 768px) {
+    .home {
+      flex-direction: row;
+      justify-content: center;
+      height: auto;
+    }
+  
+    .banner-text {
+      text-align: left;
+      flex: 1;
+    }
+  
+    .banner-buttons {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .banner-text h1 {
+      font-size: 3rem;
+      width: 80%;
+    }
+  
+    .home-p-tag {
+      font-size: 1.1rem;
+      width: 69%;
+    }
+  
+    .banner-infor h3 {
+      font-size: 1.75rem;
+    }
+  }
+
+  /* Adding mobile responsiveness */
+  @media (max-width: 767px) {
+    .banner-images {
+        width: 305px;
+        height: 312px;
+        margin: unset;
+    }
+
+    .homepic {
+      width: 150px;
+      height: 150px;
+    }
+
+    .banner-infor {
+      top: 150px;
+    }
+
+    .home {
+      padding: 20px;
+    }
+
+    .supporting{
+        width: 40px;
+        height: 40px;
+      }
+  }
+
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .banner-images:hover,
+    .homepic:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }

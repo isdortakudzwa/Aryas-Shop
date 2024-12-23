@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'JosefinSans';
+    src: url(/src/components/Fonts/JosefinSans-VariableFont_wght.ttf);
+  }
+
+.about-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.image1, .image2 {
+    width: 25%;
+    animation: slideIn 0.8s ease-out;
+}
+
+.image1 {
+    animation-name: slideInLeft;
+}
+
+.image2 {
+    animation-name: slideInRight;
+}
+
+.pics-about {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.pics-about:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    width: 33%;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #0e653b;
+    font-family: 'JosefinSans';
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'JosefinSans';
+    color: #2b2929;
+    margin-bottom: 2rem;
+}
+
+.about-text button {
+    padding: 0.6rem 2.5rem;
+    font-size: 1rem;
+    border: 2px solid #0e653b;
+    color: #666;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-text button:hover {
+    background-color: #0e653b;
+    color: #fafafa;
+    transform: translateY(-2px);
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .image1, .image2, .about-text {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}

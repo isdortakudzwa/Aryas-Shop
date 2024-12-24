@@ -1,9 +1,10 @@
 import left from './Images/right.jpg'
 import right from './Images/left.jpg'
 import './Fonts/About.css'
-
+import Testimonials from './Testimonials'
 function AboutUs() {
   return (
+    <>
     <section id="AboutUs">
     <div className='about-us'>
       <div className="image1">
@@ -21,6 +22,9 @@ function AboutUs() {
       </div>
     </div>
     </section>
+
+    <Testimonials />
+    </>
   )
 }
 

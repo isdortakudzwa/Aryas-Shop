@@ -27,7 +27,7 @@ const translations = {
     product: {
       title: "Wachi yeDigital yeCosmicGear MeteorFlex",
       category: "Wachi Dzepamusoro",
-      button: "Isa muBasket",
+      button: "Tenga",
       actions: {
         view: "Ona",
         favorite: "Dzidzai",

@@ -60,7 +60,7 @@ const Navbar = () => {
           onMouseEnter={toggleDropdown}
           onMouseLeave={toggleDropdown}
         >
-          <Link to="/ContactForm" className="nav-link dropdown-toggle">
+          <Link to="/KidsCollectionPage" className="nav-link dropdown-toggle">
             <span className="link-text">Shop</span>
           </Link>
           <ul className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>

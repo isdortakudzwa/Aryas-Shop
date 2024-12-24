@@ -8,6 +8,8 @@ import AboutUs from './components/AboutUs';
 import CollectionPage from './components/CollectionsPage';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
+import KidsCollectionPage from './components/Shop';
+
 
 function App() {
   return (  
@@ -19,6 +21,7 @@ function App() {
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/CollectionPage" element={<CollectionPage />} />
           <Route path="/ContactForm" element={<ContactForm />} />
+          <Route path="/KidsCollectionPage" element={<KidsCollectionPage />} />
         </Routes>
 
         <Footer />
